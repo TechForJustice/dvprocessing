@@ -27,6 +27,7 @@ Then run the following commands to bootstrap your environment.
     git clone https://github.com/lorenanicole/DVProcessing
     cd DVProcessing
     pip install -r requirements/dev.txt
+    pip install -r requirements.txt
     bower install
     python manage.py server
 
@@ -43,6 +44,7 @@ Once you have installed your DBMS, created a database and database user, updated
 Now you can run the app again.
   
 ::
+
     python manage.py server
 
 
