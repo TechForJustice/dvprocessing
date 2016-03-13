@@ -45,3 +45,5 @@ docs/_build
 
 # Virtualenvs
 env/
+
+DVProcessing/db_passwords.py
