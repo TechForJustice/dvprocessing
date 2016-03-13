@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container-narrow">
-  <h1>Register</h1>
+  <h1>Sign Up to Volunteer</h1>
     <br/>
     <form id="registerForm" class="form form-register" method="POST" action="" role="form">
             {{ form.hidden_tag() }}
@@ -10,6 +10,13 @@
                 {{form.username.label}}
                 {{form.username(placeholder="Username", class_="form-control")}}
             </div>
+<!--             risk
+            address
+            first name
+            last name
+            county
+            phone number
+            can we text you? -->
             <div class="form-group">
                 {{form.email.label}}
                 {{form.email(placeholder="Email", class_="form-control")}}
@@ -24,7 +31,7 @@
             </div>
             <p><input class="btn btn-default btn-submit" type="submit" value="Register"></p>
     </form>
-    <p><em>Already registered?</em> Click <a href="/">here</a> to login.</p>
+    <p><em>Already a volunteer?</em> Click <a href="/">here</a> to login.</p>
 </div>
 {% endblock %}
 

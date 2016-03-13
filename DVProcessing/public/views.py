@@ -43,7 +43,7 @@ def logout():
     return redirect(url_for('public.home'))
 
 
-@blueprint.route('/register/', methods=['GET', 'POST'])
+@blueprint.route('/volunteer/', methods=['GET', 'POST'])
 def register():
     """Register new user."""
     form = RegisterForm(request.form, csrf_enabled=True)
@@ -53,7 +53,7 @@ def register():
         return redirect(url_for('public.home'))
     # else:
         # flash_errors(form)
-    return render_template('public/register.html', form=form)
+    return render_template('public/volunteer.html', form=form)
 
 
 @blueprint.route('/about/')
