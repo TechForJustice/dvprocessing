@@ -42,6 +42,7 @@ class User(UserMixin, SurrogatePK, Model):
     address = Column(db.String(80), nullable=False)
     phone_number = Column(db.Integer, nullable=False)
     can_text = Column(db.Boolean(), default=False)
+    risk_threshold = Column(db.String, nullable=True)
 
     def __init__(self, username, email, password=None, **kwargs):
         """Create instance."""
