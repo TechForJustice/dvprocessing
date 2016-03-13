@@ -37,6 +37,7 @@ psycopg2==2.6.1
 py==1.4.31
 pycparser==2.14
 pyflakes==1.0.0
+pygerduty==0.34.0
 pytest==2.9.0
 python-dateutil==2.5.0
 python-editor==0.5
@@ -50,5 +51,4 @@ webassets==0.11.1
 WebOb==1.5.1
 WebTest==2.0.20
 Werkzeug==0.11.4
-wheel==0.29.0
 WTForms==2.1
