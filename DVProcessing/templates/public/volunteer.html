@@ -1,10 +1,11 @@
 
 {% extends "layout.html" %}
 {% block content %}
-<div class="container-narrow">
-  <h1>Sign Up to Volunteer</h1>
-    <br/>
-    <form id="registerForm" class="form form-register" method="POST" action="" role="form">
+<div class="row">
+    <div class="col-lg-8">
+        <h1>Sign Up to Volunteer</h1>
+        <br/>
+        <form id="registerForm" class="form form-register" method="POST" action="" role="form">
             {{ form.hidden_tag() }}
             <div class="form-group">
                 {{form.first_name.label}}
@@ -47,8 +48,14 @@
                 {{form.confirm(placeholder="Password (again)", class_="form-control")}}
             </div>
             <p><input class="btn btn-default btn-submit" type="submit" value="Register"></p>
-    </form>
-    <p><em>Already a volunteer?</em> Click <a href="/">here</a> to login.</p>
+        </form>
+        <p><em>Already a volunteer?</em> Click <a href="/">here</a> to login.</p>
+    </div>
+    <div class="col-lg-4">
+        <h2>Why Volunteer?</h2> 
+        <p>Process service is easy, and anyone (over 18) can do it. All that is involved is physically handing someone a stack of documents and giving them a short explanation (which will be provided to you). But process service in emergency order of protection cases makes the lives of domestic violence victims quantifiably better. Without your help, victims frequently have to return to court for months on end waiting for the sheriff to successfully serve a abuser. Only once an abuser is served can victims and their advocates ask the legal system for a long term order of protection.</p>
+        <h4>Have additional questions? See our <a href="{{ url_for('public.volunteer_faq') }}">FAQ</a></h4>
+    </div>
 </div>
 {% endblock %}
 

@@ -45,7 +45,7 @@ def logout():
 
 @blueprint.route('/volunteer/', methods=['GET', 'POST'])
 def register():
-    """Register new user."""
+    """Volunteer Sign Up."""
     form = RegisterForm(request.form, csrf_enabled=True)
     if form.validate_on_submit():
         User.create(username=form.username.data, email=form.email.data, password=form.password.data, active=True)
@@ -61,3 +61,16 @@ def about():
     """About page."""
     form = LoginForm(request.form)
     return render_template('public/about.html', form=form)
+
+
+@blueprint.route('/volunteer_faq/')
+def volunteer_faq():
+    """Volunteer FAQ"""
+    form = LoginForm(request.form)
+    return render_template('public/volunteer_faq.html', form=form)
+
+@blueprint.route('/attorney_faq/')
+def attorney_faq():
+    """Attorney FAQ"""
+    form = LoginForm(request.form)
+    return render_template('public/attorney_faq.html', form=form)
