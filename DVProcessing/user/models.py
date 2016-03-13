@@ -38,6 +38,10 @@ class User(UserMixin, SurrogatePK, Model):
     last_name = Column(db.String(30), nullable=True)
     active = Column(db.Boolean(), default=False)
     is_admin = Column(db.Boolean(), default=False)
+    role = Column(db.String(30), nullable=False)
+    address = Column(db.String(80), nullable=False)
+    phone_number = Column(db.Integer, nullable=False)
+    can_text = Column(db.Boolean(), default=False)
 
     def __init__(self, username, email, password=None, **kwargs):
         """Create instance."""
