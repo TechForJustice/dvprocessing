@@ -12,6 +12,10 @@ body {
   padding-top: 60px;
 }
 
+p {
+  font-size: 1.2em;
+}
+
 section {
   overflow: auto;
 }
